@@ -169,6 +169,40 @@
   color: #666;
 }
 
+/* Video embeds */
+.videos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.video-embed h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.video-embed p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Projects */
 .project-item {
   display: flex;
