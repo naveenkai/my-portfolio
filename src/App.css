@@ -1,38 +1,272 @@
-.App {
+.portfolio {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Hero */
+.hero {
   text-align: center;
+  padding-bottom: 3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero-image {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero-tagline {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 0 1.5rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-icons {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  color: #888;
+  text-decoration: none;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.social-icons a:hover {
+  color: #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Section separators */
+.section {
+  padding: 3rem 0;
+  border-top: 1px solid #ddd;
+}
+
+.section:first-of-type {
+  border-top: none;
+}
+
+.section-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: lowercase;
+  margin: 0 0 1.5rem;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 2px solid #ddd;
+  margin-left: 0.5rem;
+}
+
+.timeline-entry {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-entry:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-entry::before {
+  content: '';
+  position: absolute;
+  left: -2.5rem;
+  top: 0.25rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #666;
+}
+
+.timeline-year {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content {
+  font-size: 0.95rem;
+}
+
+.timeline-content p {
+  margin: 0 0 0.5rem;
+}
+
+.timeline-content p:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-content ul {
+  margin: 0.25rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.timeline-content li {
+  margin-bottom: 0.25rem;
+}
+
+/* Bio */
+.bio p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Featured talks grid */
+.talks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+.talk-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.talk-item:hover {
+  opacity: 0.85;
+}
+
+.talk-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #eee;
+}
+
+.talk-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.talk-year {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Projects */
+.project-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-item:last-child {
+  margin-bottom: 0;
+}
+
+.project-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background: #eee;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.project-content h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.project-content p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Research list */
+.research-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.research-list li {
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.research-list li:last-child {
+  margin-bottom: 0;
+}
+
+.research-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Testimonials */
+.testimonial {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial:last-child {
+  margin-bottom: 0;
+}
+
+.testimonial-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #eee;
+}
+
+.testimonial-content blockquote {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #333;
+}
+
+.testimonial-author {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 600;
+}
+
+/* Misc */
+.misc-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.misc-links li {
+  margin-bottom: 0.5rem;
+}
+
+.misc-socials {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
