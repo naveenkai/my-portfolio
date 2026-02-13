@@ -25,7 +25,7 @@ function App() {
           className="hero-image"
         />
         <h1 className="hero-name">Naveen K</h1>
-        <p className="hero-tagline">I want to deeply understand humans and build AGI.</p>
+        <p className="hero-tagline">I want to deeply understand humans and build AGI. Hmm </p>
         <div className="social-icons">
           <a href="mailto:naveenk.ai.engineer@gmail.com" aria-label="Email">
             <svg className="social-icon" viewBox="0 0 24 24" fill="currentColor">
