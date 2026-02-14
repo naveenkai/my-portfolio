@@ -1,43 +1,75 @@
 .portfolio {
-  max-width: 720px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
 }
 
 /* Hero */
 .hero {
-  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
   padding-bottom: 3rem;
 }
 
 .hero-image {
   width: 140px;
   height: 140px;
+  flex-shrink: 0;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .hero-name {
   font-size: 1.75rem;
   font-weight: 700;
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.25rem;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 0 0.25rem;
+}
+
+.hero-email {
+  margin: 0 0 1rem;
+}
+
+.hero-email a {
+  font-size: 0.95rem;
 }
 
 .hero-tagline {
   font-size: 1rem;
   color: #555;
   margin: 0 0 1.5rem;
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .social-icons {
   display: flex;
-  justify-content: center;
   gap: 0.75rem;
   flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
 }
 
 .social-icons a {
@@ -74,6 +106,12 @@
   margin: 0 0 1.5rem;
 }
 
+.section-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0 0 1rem;
+}
+
 /* Timeline */
 .timeline {
   position: relative;
@@ -102,10 +140,23 @@
   background: #666;
 }
 
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-org-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
 .timeline-year {
   font-weight: 600;
   font-size: 0.95rem;
-  margin-bottom: 0.25rem;
 }
 
 .timeline-content {
@@ -131,8 +182,12 @@
 
 /* Bio */
 .bio p {
-  margin: 0;
+  margin: 0 0 1rem;
   font-size: 0.95rem;
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
 }
 
 /* Featured talks grid */
@@ -250,6 +305,66 @@
   margin-bottom: 0;
 }
 
+.research-item {
+  margin-bottom: 2rem;
+}
+
+.research-item:last-child {
+  margin-bottom: 0;
+}
+
+.research-item .research-text {
+  margin-bottom: 0.75rem;
+}
+
+.research-videos-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.research-video-card {
+  flex: 1;
+  min-width: 260px;
+  max-width: 320px;
+}
+
+.research-video-card span {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.35rem;
+}
+
+.research-video-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.research-video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.research-video-small {
+  max-width: 240px;
+  aspect-ratio: 16 / 9;
+}
+
+.research-video-small iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .research-title {
   font-weight: 600;
   margin-bottom: 0.25rem;
@@ -301,6 +416,91 @@
 
 .misc-socials {
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
   flex-wrap: wrap;
+}
+
+.misc-socials a {
+  text-decoration: underline;
+}
+
+/* Blog page */
+.blog-nav {
+  margin-bottom: 2rem;
+}
+
+.blog-nav a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.blog-nav a:hover {
+  color: #004499;
+}
+
+.blog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-list li {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.blog-list li:last-child {
+  border-bottom: none;
+}
+
+.blog-list-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-list-item:hover .blog-title {
+  color: #0066cc;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.blog-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.blog-excerpt {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.blog-post-header {
+  margin-bottom: 2rem;
+}
+
+.blog-post-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0;
+}
+
+.blog-post-content {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.blog-post-content p {
+  margin: 0 0 1rem;
+}
+
+.blog-post-content p:last-child {
+  margin-bottom: 0;
 }
