@@ -111,6 +111,12 @@ function Portfolio() {
             <p>Upload/record your voice, choose style and generate. {LINK('https://huggingface.co/spaces/naveenk-ai/openvoice_voicecloning_win', 'Try here')}.</p>
           </div>
         </div>
+        <div className="project-item">
+          <div className="project-content">
+            <h4>AgentML</h4>
+            <p>A fully local AI agent for end-to-end dataset analysis—EDA, feature engineering, model training, and multi-model debate. Uses Jupyter kernel client for code execution, SQLite for session management, and open-source models via Ollama. A manager agent cross-checks outputs for accuracy. Includes stages like data prep, EDA, feature engineering, training, and evaluation with agent debate on model selection. No API keys, no cloud—runs entirely on your machine.</p>
+          </div>
+        </div>
       </section>
 
       {/* Research */}
