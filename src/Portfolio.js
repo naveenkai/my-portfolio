@@ -70,7 +70,7 @@ function Portfolio() {
               <div className="timeline-year">Jun 2024 – Mar 2025</div>
             </div>
             <div className="timeline-content">
-              <p><strong>AI/ML Engineer</strong> at Indus Vision, Bengaluru.</p>
+              <p><strong>AI/ML Engineer</strong> at Indus Vision, Bengaluru</p>
               <p>Led POSTURA—2D clinical gait system. 85–95% keypoint accuracy, 98% gait phase detection. Perspective correction, step measurement without 3D sensors. {LINK(YOUTUBE.postura, 'POSTURA demo')}, {LINK(YOUTUBE.rockers, '3 Rockers')}.</p>
             </div>
           </div>
