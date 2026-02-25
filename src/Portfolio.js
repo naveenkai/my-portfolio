@@ -61,7 +61,7 @@ function Portfolio() {
             </div>
             <div className="timeline-content">
               <p><strong>AI Engineer</strong> at Ekfrazo Technologies, Bengaluru.</p>
-              <p>Voice AI agents for 10k+ users. 95% automation, 500–600 ms latency. Reasoning, multi-model debate. RAG auto-resolving 70–80% of manual queries. Vapi, Pipecat, LangGraph, CrewAI.</p>
+              <p>Voice AI agents, 95% automation, 500–600 ms latency. Reasoning, multi-model debate. RAG auto-resolving 70–80% of manual queries. Vapi, Pipecat, LangGraph, CrewAI.</p>
             </div>
           </div>
           <div className="timeline-entry">
