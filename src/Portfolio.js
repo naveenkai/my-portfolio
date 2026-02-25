@@ -70,7 +70,7 @@ function Portfolio() {
               <div className="timeline-year">Jun 2024 – Mar 2025</div>
             </div>
             <div className="timeline-content">
-              <p><strong>AI/ML Engineer</strong> at Indus Vision, Bengaluru.</p>
+              <p><strong>AI/ML Engineer</strong> at Indus Vision, Bengaluru</p>
               <p>Led POSTURA—2D clinical gait system. 85–95% keypoint accuracy, 98% gait phase detection. Perspective correction, step measurement without 3D sensors. {LINK(YOUTUBE.postura, 'POSTURA demo')}, {LINK(YOUTUBE.rockers, '3 Rockers')}.</p>
             </div>
           </div>
@@ -109,6 +109,12 @@ function Portfolio() {
           <div className="project-content">
             <h4>Voice cloning using OpenVoice</h4>
             <p>Upload/record your voice, choose style and generate. {LINK('https://huggingface.co/spaces/naveenk-ai/openvoice_voicecloning_win', 'Try here')}.</p>
+          </div>
+        </div>
+        <div className="project-item">
+          <div className="project-content">
+            <h4>AgentML</h4>
+            <p>A fully local AI agent for end-to-end dataset analysis—EDA, feature engineering, model training, and multi-model debate. Uses Jupyter kernel client for code execution, SQLite for session management, and open-source models via Ollama. A manager agent cross-checks outputs for accuracy. Includes stages like data prep, EDA, feature engineering, training, and evaluation with agent debate on model selection. No API keys, no cloud—runs entirely on your machine.</p>
           </div>
         </div>
       </section>
