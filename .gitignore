@@ -17,7 +17,9 @@
 .env.development.local
 .env.test.local
 .env.production.local
-.claude
+# Keep .claude/ tracked but ignore local-only settings
+.claude/settings.local.json
+.claude/launch.json
 
 npm-debug.log*
 yarn-debug.log*
