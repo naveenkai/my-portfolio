@@ -1,6 +1,14 @@
+import { Link } from 'react-router-dom';
+import posts from './writing/posts';
+
 const L = (href, text) => (
   <a href={href} target="_blank" rel="noopener noreferrer">{text}</a>
 );
+
+const formatDate = (iso) => {
+  const d = new Date(iso);
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+};
 
 function Portfolio() {
   return (
@@ -25,6 +33,8 @@ function Portfolio() {
           {L('https://www.linkedin.com/in/naveenkai/', 'LinkedIn')}
           {' | '}
           {L('https://www.youtube.com/@naveenk_ai', 'YouTube')}
+          {' | '}
+          <Link to="/writing">Writing</Link>
         </p>
       </header>
 
@@ -173,6 +183,23 @@ function Portfolio() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Writing */}
+      <section>
+        <h2>Writing</h2>
+        {posts.slice(0, 3).map((p) => (
+          <div className="entry" key={p.slug}>
+            <p>
+              <Link to={`/writing/${p.slug}`}><strong>{p.title}</strong></Link>
+              <span className="year">{formatDate(p.date)}</span>
+            </p>
+            {p.blurb && <p>{p.blurb}</p>}
+          </div>
+        ))}
+        {posts.length > 3 && (
+          <p><Link to="/writing">All writing →</Link></p>
+        )}
       </section>
 
       {/* Highlights */}
